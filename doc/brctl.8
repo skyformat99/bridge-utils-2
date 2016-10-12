@@ -159,14 +159,19 @@ an unsigned 8-bit quantity (a number between 0 and 255), and has no
 dimension. This metric is used in the designated port and root port
 selection algorithms.
 
-
 .SH NOTES
 .BR brctl(8)
-replaces the older brcfg tool.
+is obsolete. Some features such as STP guard, harpin mode, fastleave and root
+block are intentionally not implemented in this command.
+Instead use
+.B bridge
+command from
+.B iproute2
+package for a more full set of features.
 
 .SH SEE ALSO
-.BR ipchains(8),
 .BR iptables(8)
 
 .SH AUTHOR
 Lennert Buytenhek <buytenh@gnu.org>
+Stephen Hemminger <stephen@networkplumber.org>
