@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([bridge-utils],[1.5])
+AC_INIT([bridge-utils],[1.6])
 AC_CONFIG_HEADERS(libbridge/config.h)
 
 AC_ARG_WITH([linux-headers],
