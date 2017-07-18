@@ -483,7 +483,7 @@ static const struct command commands[] = {
 
 const struct command *command_lookup(const char *cmd)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < sizeof(commands)/sizeof(commands[0]); i++) {
 		if (!strcmp(cmd, commands[i].name))
@@ -495,7 +495,7 @@ const struct command *command_lookup(const char *cmd)
 
 void command_helpall(void)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; i < sizeof(commands)/sizeof(commands[0]); i++) {
 		printf("\t%-10s\t%s\n", commands[i].name, commands[i].help);
