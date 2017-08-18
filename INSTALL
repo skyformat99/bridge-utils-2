@@ -1,0 +1,5 @@
+# edit libbridge/libbridge.h to add #include <netinet/ip6.h>
+autoconf
+./configure --prefix=/ --libdir=/usr/lib64 --includedir=/usr/include --with-linux-headers=/usr/include
+make
+make install
