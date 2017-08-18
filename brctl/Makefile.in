@@ -33,7 +33,7 @@ install: $(PROGRAMS)
 	mkdir -p $(DESTDIR)$(sbindir)
 	$(INSTALL) -m 755 $(PROGRAMS) $(DESTDIR)$(sbindir)
 
-brctl:	$(brctl_OBJECTS) ../libbridge/libbridge.a
+brctl:	$(brctl_OBJECTS) ../libbridge/libbridge.so
 	$(CC) $(LDFLAGS) $(brctl_OBJECTS) $(LIBS) -o brctl
 
 %.o: %.c brctl.h
