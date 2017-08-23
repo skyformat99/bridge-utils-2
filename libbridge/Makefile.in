@@ -23,6 +23,7 @@ all:    $(LIBFILE)
 # At present there is no need for a bridge-utils-devel package
 # (I respectfully disagree -- bacs)
 install:
+	cp libbridge.h $(includedir)
 	cp $(LIBFILE) $(libdir)/$(LIBFILE).1.0
 	ln -sf $(libdir)/$(LIBFILE).1.0 $(libdir)/$(LIBFILE).1
 	ln -sf $(libdir)/$(LIBFILE).1 $(libdir)/$(LIBFILE)
